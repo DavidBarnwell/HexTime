@@ -3,8 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>HexTime</title>
+	<script>
+		var d = new Date(),
+		h = d.getHours(),
+		m = d.getMinutes(),
+		s = d.getSeconds(),
+		time = h+":"+m+":"+s;
+		console.log(time);
+
+	</script>
 </head>
 <body>
+	<div id="timeContainer">
+		<h1 id ="time"></h1>
+	</div>
 	
 </body>
 </html>
