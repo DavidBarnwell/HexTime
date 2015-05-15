@@ -4,12 +4,14 @@
 	<meta charset="UTF-8">
 	<title>HexTime</title>
 	<script>
-		var d = new Date(),
-		h = d.getHours(),
-		m = d.getMinutes(),
-		s = d.getSeconds(),
-		time = h+":"+m+":"+s;
-		console.log(time);
+		
+		setInterval(function(){timer()},1000);
+
+		function timer(){
+			var d = new Date();
+			var time= d.toLocaleTimeString();
+			document.getElementById("time").innerHTML = time;
+		}
 
 	</script>
 </head>
