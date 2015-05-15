@@ -3,27 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title>HexTime</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
 	<script>
 		
 		setInterval(function(){timer()},1000);
 
 		function timer(){
-			var d = new Date();
-			var time= d.toLocaleTimeString();
+			var d = new Date(),
+			time= d.toLocaleTimeString();
+
 			document.getElementById("time").innerHTML = time;
 			document.getElementById("main").style.backgroundColor = getHex(time);
 		}
 
-			function getHex(t){
-				var hex ="#"+t.toString().replace(/:/g,'');
-				return hex;
-				
-			}
+		function getHex(t){
+			var hex ="#"+t.toString().replace(/:/g,'');
+			return hex;
+			
+		}
 	</script>
 </head>
 <body id="main">
+	<div id="top"><h1>HexTime</h1></div>
 	<div id="timeContainer">
-		<h1 id ="time"></h1>
+		<h1 id="hex">#</h1>
+		<h1 id="time"></h1>
 	</div>
 	
 </body>
