@@ -11,11 +11,17 @@
 			var d = new Date();
 			var time= d.toLocaleTimeString();
 			document.getElementById("time").innerHTML = time;
+			document.getElementById("main").style.backgroundColor = getHex(time);
 		}
 
+			function getHex(t){
+				var hex ="#"+t.toString().replace(/:/g,'');
+				return hex;
+				
+			}
 	</script>
 </head>
-<body>
+<body id="main">
 	<div id="timeContainer">
 		<h1 id ="time"></h1>
 	</div>
